@@ -7,6 +7,7 @@
 
 ---
 
+
 ### 🧪 Instructions
 
 To become a certified **Multi-Cloud Blue Team Analyst**, the ultimate goal is to investigate various attack scenarios using the **SIEM: ELK Console**. The investigation involves analyzing multiple attacks targeting **AWS**, **Azure**, and **GCP** environments.
@@ -18,6 +19,7 @@ Successfully completing the module requires solving all three cloud-specific cha
 - ⏱️ Additionally, there are no time constraints, giving you the flexibility to analyze attack scenarios at your own pace and thoroughly investigate each challenge.
 
 ---
+
 
 ### 🔐 LAB ACCESS
 
@@ -36,6 +38,8 @@ Successfully completing the module requires solving all three cloud-specific cha
 > Todas as evidências foram coletadas via **Kibana** e analisadas conforme boas práticas de **análise forense em ambientes cloud**.
 
 ---
+
+
 
 ### 🔎 Q1 — Investigate and identify the Azure user which is targeted for password spraying attack
 
@@ -60,6 +64,8 @@ Através da análise, descobrimos o alvo do ataque de password spraying. A image
 > Esse comportamento automatizado é um forte indício de ataque, sendo essencial correlacionar tentativas e origem IP para futuras ações de defesa.
 
 ---
+
+
 
 ### 🔎 Q2 — Determine the identity.claims.appid which is associated with Virtual Machine Create operation
 
@@ -92,6 +98,8 @@ A imagem abaixo mostra claramente o `appid` vinculado à operação de criação
 
 ---
 
+
+
 ### 🔎 Q3 — Retrieve the resource group associated with the virtual machine deployment event
 
 **Hint**: By reviewing the `azure.resource.group` we get to identify the Resource Group associated with virtual machine deployment event.
@@ -118,6 +126,8 @@ A imagem a seguir mostra o resource group associado ao evento de criação da VM
 
 ---
 
+
+
 ### 🔎 Q4 — Identify the Public IP entity name associated with the public IP creation for the VM
 
 **Hint**: Hunt for `azure.resource.group` to identify the Public IP entity name with public IP creation event.
@@ -142,6 +152,8 @@ A imagem abaixo mostra o nome da entidade de IP público associada:
 > Criar IPs públicos sem controle é uma prática arriscada; monitorar esses eventos é crucial para prevenir exposição desnecessária de serviços.
 
 ---
+
+
 
 ### 🔎 Q5 — Determine the URI which is associated with Azure Key Vault exfiltration
 
@@ -171,6 +183,8 @@ A imagem abaixo mostra a URI utilizada na exfiltração via Key Vault:
 
 ---
 
+
+
 ### 🔎 Q6 — Unusual LISTKEYS request activity detected—identify the associated resource names
 
 **Hint**: Hunt for `azure.resource.name` to determine the resource associated with `LISTKEYS` request activity.
@@ -196,6 +210,8 @@ A imagem a seguir destaca o recurso envolvido na requisição `LISTKEYS`:
 > Operações `LISTKEYS` devem ser rigorosamente monitoradas, uma vez que representam pontos de entrada para comprometimento de segredos e credenciais.
 
 ---
+
+
 
 ### 🔎 Q7 — Suspicious AZ storage container deletion activity identified, determine the blob name which gets associated over it
 
@@ -229,6 +245,8 @@ A imagem mostra o evento de deleção com o blob de destino claramente especific
 
 ---
 
+
+
 ### 🔎 Q8 — Investigate the Blob deletion activity and determine the objects which are deleted
 
 **Hint**: Hunt for `DeleteBlob` event and review `azure.platformlogs.uri` to identify deleted blobs.
@@ -243,6 +261,8 @@ Blobs deletados identificados:
 
 ---
 
+
+
 ### 🔎 Q9 — Determine the “Principal ID” associated with the diagnostic setting the attacker deletes to stop Logging
 
 **Hint**: Prioritize the `Principal ID` field associated with `DIAGNOSTICSETTINGS/DELETE`.
@@ -254,6 +274,8 @@ Foi detectado um evento `MICROSOFT.INSIGHTS/DIAGNOSTICSETTINGS/DELETE`. Ao expan
 `Principal ID`: `ef0a2f099a5244ef8f028422fd53db99`
 
 ---
+
+
 
 ### 🔎 Q10 — Identify which diagnostic setting entity has been deleted in Azure
 
@@ -270,6 +292,8 @@ No mesmo log da questão anterior, encontramos o nome da configuração de diagn
 Perfeito! Aqui está uma sugestão de **Conclusão** final para o `azure.md`, mantendo o tom técnico, estruturado e profissional conforme ISO 27001, NIST e CIS, com um toque de encerramento digno do nosso trabalho:
 
 ---
+
+
 
 ## 🧾 Conclusão
 
