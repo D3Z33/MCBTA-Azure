@@ -289,11 +289,6 @@ No mesmo log da questão anterior, encontramos o nome da configuração de diagn
 
 ---
 
-Perfeito! Aqui está uma sugestão de **Conclusão** final para o `azure.md`, mantendo o tom técnico, estruturado e profissional conforme ISO 27001, NIST e CIS, com um toque de encerramento digno do nosso trabalho:
-
----
-
-
 
 ## 🧾 Conclusão
 
