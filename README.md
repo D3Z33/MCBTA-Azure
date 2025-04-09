@@ -55,7 +55,7 @@ O enunciado indica um possível ataque de password spraying direcionado a um usu
 #### ✅ Resultado
 Através da análise, descobrimos o alvo do ataque de password spraying. A imagem a seguir mostra os eventos filtrados:
 
-![Password Spraying - Python UA](img/password-spraying.png)
+[![Password Spraying - Python UA](img/password-spraying.png)](https://github.com/D3Z33/MCBTA-Azure/blob/main/Resposta%20Q1.png)
 
 > Esse comportamento automatizado é um forte indício de ataque, sendo essencial correlacionar tentativas e origem IP para futuras ações de defesa.
 
