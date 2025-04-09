@@ -55,7 +55,7 @@ O enunciado indica um possível ataque de password spraying direcionado a um usu
 #### ✅ Resultado
 Através da análise, descobrimos o alvo do ataque de password spraying. A imagem a seguir mostra os eventos filtrados:
 
-[![Password Spraying - Python UA](img/password-spraying.png)](https://github.com/D3Z33/MCBTA-Azure/blob/main/Resposta%20Q1.png)
+[![Password Spraying - Python UA](img/q1.png)](https://github.com/D3Z33/MCBTA-Azure/blob/master/img/q1.png)
 
 > Esse comportamento automatizado é um forte indício de ataque, sendo essencial correlacionar tentativas e origem IP para futuras ações de defesa.
 
@@ -85,7 +85,8 @@ O objetivo dessa questão é identificar qual aplicação (representada pelo `ap
 #### ✅ Resultado
 A imagem abaixo mostra claramente o `appid` vinculado à operação de criação da máquina virtual:
 
-![VM Write AppID](img/vm-write-appid.png)
+[![VM Write AppID - Parte 1](img/q2.1.png)](https://github.com/D3Z33/MCBTA-Azure/blob/master/img/q2.1.png)  
+[![VM Write AppID - Parte 2](img/q2.2.png)](https://github.com/D3Z33/MCBTA-Azure/blob/master/img/q2.2.png)
 
 > Monitorar ações como `VIRTUALMACHINES/WRITE` é fundamental para detectar movimentações laterais ou persistência em ambientes cloud, especialmente quando realizadas por service principals.
 
@@ -111,7 +112,7 @@ O objetivo aqui é descobrir em qual resource group foi realizada a criação de
 #### ✅ Resultado
 A imagem a seguir mostra o resource group associado ao evento de criação da VM:
 
-![Resource Group VM](img/q3-resource-group.png)
+[![Resource Group VM](img/q3.png)](https://github.com/D3Z33/MCBTA-Azure/blob/master/img/q3.png)
 
 > Saber o grupo de recursos afetado é essencial para priorizar respostas em incidentes e identificar dependências críticas.
 
@@ -136,7 +137,7 @@ O foco aqui é determinar qual recurso de IP público foi criado durante o provi
 #### ✅ Resultado
 A imagem abaixo mostra o nome da entidade de IP público associada:
 
-![Public IP Resource](img/q4-public-ip.png)
+[![Public IP Resource](img/q4.png)](https://github.com/D3Z33/MCBTA-Azure/blob/master/img/q4.png)
 
 > Criar IPs públicos sem controle é uma prática arriscada; monitorar esses eventos é crucial para prevenir exposição desnecessária de serviços.
 
@@ -164,7 +165,7 @@ Essa etapa visa detectar possíveis atividades de exfiltração do Azure Key Vau
 #### ✅ Resultado
 A imagem abaixo mostra a URI utilizada na exfiltração via Key Vault:
 
-![Key Vault Exfiltration URI](img/q5-keyvault-uri.png)
+[![Key Vault Exfiltration URI](img/q5.png)](https://github.com/D3Z33/MCBTA-Azure/blob/master/img/q5.png)
 
 > Atividades de `ListKeys` exigem monitoramento contínuo — podem indicar acesso não autorizado a chaves criptográficas sensíveis.
 
@@ -190,7 +191,7 @@ A ação `LISTKEYS` permite a visualização das chaves de acesso de serviços c
 #### ✅ Resultado
 A imagem a seguir destaca o recurso envolvido na requisição `LISTKEYS`:
 
-![ListKeys - ORGSECRETKEYVAULT](img/listkeys-orgsecretkeyvault.png)
+[![ListKeys - ORGSECRETKEYVAULT](img/q6.png)](https://github.com/D3Z33/MCBTA-Azure/blob/master/img/q6.png)
 
 > Operações `LISTKEYS` devem ser rigorosamente monitoradas, uma vez que representam pontos de entrada para comprometimento de segredos e credenciais.
 
@@ -222,7 +223,7 @@ A exclusão de containers no Azure Storage pode significar uma tentativa de ofus
 #### ✅ Resultado
 A imagem mostra o evento de deleção com o blob de destino claramente especificado:
 
-![DeleteContainer - insights-activity-logs](img/deletecontainer-insights-activity-logs.png)
+[![DeleteContainer - insights-activity-logs](img/q7.png)](https://github.com/D3Z33/MCBTA-Azure/blob/master/img/q7.png)
 
 > A exclusão desse blob pode indicar uma tentativa de encobrir atividades anteriores, sendo recomendada investigação imediata e auditoria de permissões nesse storage account.
 
